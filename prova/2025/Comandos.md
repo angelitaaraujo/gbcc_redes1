@@ -1,11 +1,7 @@
-<style>
-    body {
-        font-size: 12px;
-    }
-    pre {
-        font-size: 11px;
-    }
-</style>
+<head>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
 ## Comandos úteis
 Esta é uma lista de comandos essenciais para configurar os roteadores e switches da AngelCorp. Lembre-se de substituir os valores genéricos pelos endereços IP, máscaras, IDs de processo e AS corretos que você calcular e determinar para sua rede.
 
@@ -50,7 +46,7 @@ Ativar a Interface (no shutdown):
 ```
 no shutdown
 ```
-(Interfaces seriais também podem precisar de clock rate se forem DCE)
+Interfaces seriais também podem precisar de clock rate se forem DCE
 ```
 clock rate 256000
 ```

@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    margin: 10px;
+    font-size: 12px;
+    text-align: justify;
+    color: #000; 
+}
+.header-container {
+    display: flex; /* Usa Flexbox para alinhar itens lado a lado */
+    align-items: center; /* Alinha verticalmente no centro */
+    margin-bottom: 10px;
+    border-bottom: 0.5px solid #5ca152;
+    padding-bottom: 10px;
+}
+.header-logo {
+    margin-right: 30px; /* Espaço entre o logo e o texto */
+    max-width: 100px; /* Tamanho máximo do logo */
+    height: auto;
+}
+.header-info {
+    font-size: 11px;
+    color: #000;     
+    }
+.orientacoes {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    font-size: 9px;
+    text-align: justify;
+    color: #050505; 
+    margin-top: 20px;
+    border-bottom: 1px solid #e3e3e3;
+}
+h1 {
+    font-size: 15px;
+    font-weight: bold;
+    border-bottom: 0.5px solid #e3e3e3;
+}
+h2 {
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 0.5px solid #e3e3e3;
+}
+h3 {
+    font-size: 13px;
+    font-weight: bold;
+}
+ul {
+    list-style-type: disc;
+    margin-left: 5px;
+    padding-left: 5px;
+}
+ol {
+    margin-left: 5px;
+    padding-left: 5px;
+}
+li {
+    margin-bottom: 5px;
+    margin-left: 5px;
+    padding-left: 5px;
+}
+.important-tip {
+    padding: 14px;
+    margin: 20px 0;
+}
+.note {
+    font-style: italic;
+    color: #666;
+    margin-top: 10px;
+    display: block;
+}
+pre {
+    font-size: 11px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+code{
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}

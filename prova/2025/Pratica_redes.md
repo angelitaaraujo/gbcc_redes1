@@ -7,36 +7,67 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
+            line-height: 1.5;
+            margin: 10px;
+            font-size: 12px;
+            text-align: justify;
+            color: #000; 
         }
         .header-container {
             display: flex; /* Usa Flexbox para alinhar itens lado a lado */
             align-items: center; /* Alinha verticalmente no centro */
-            margin-bottom: 20px;
-            border-bottom: 1px solid #fff;
+            margin-bottom: 10px;
+            border-bottom: 0.5px solid #5ca152;
             padding-bottom: 10px;
         }
         .header-logo {
-            margin-right: 20px; /* Espaço entre o logo e o texto */
-            max-width: 130px; /* Tamanho máximo do logo */
+            margin-right: 30px; /* Espaço entre o logo e o texto */
+            max-width: 100px; /* Tamanho máximo do logo */
             height: auto;
         }
         .header-info {
-            font-size: 1em;
-            color: #000;     }
+            font-size: 11px;
+            color: #000;     
+            }
+        .orientacoes {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            font-size: 9px;
+            text-align: justify;
+            color: #050505; 
+            margin-top: 20px;
+            border-bottom: 1px solid #e3e3e3;
+        }
+        h1 {
+            font-size: 15px;
+            font-weight: bold;
+            border-bottom: 0.5px solid #e3e3e3;
+        }
+        h2 {
+            font-size: 14px;
+            font-weight: bold;
+            border-bottom: 0.5px solid #e3e3e3;
+        }
+        h3 {
+            font-size: 13px;
+            font-weight: bold;
+        }
         ul {
             list-style-type: disc;
-            margin-left: 20px;
+            margin-left: 5px;
+            padding-left: 5px;
         }
         ol {
-            margin-left: 20px;
+            margin-left: 5px;
+            padding-left: 5px;
         }
         li {
-            margin-bottom: 8px;
+            margin-bottom: 5px;
+            margin-left: 5px;
+            padding-left: 5px;
         }
         .important-tip {
-            padding: 15px;
+            padding: 14px;
             margin: 20px 0;
         }
         .note {
@@ -58,11 +89,10 @@
             <p><strong>Data:</strong> ____/_____/_______ </p>
         </div>
     </div>
-    <hr style="border: 2px solid olivegreen;">
     <div style="text-align: center; font-size: 1.5em; font-weight: bold; margin-top: 20px;">
         Avaliação Prática - Camada de Rede
     </div>
-    <div style="text-align: left; font-size: 0.7em; margin-top: 20px;">
+    <div class="orientacoes">
         <b>Orientações:</b><br>
         1. A avaliação é individual e sem consulta.<br>
         2. Durante a avaliaçaõ você poderá usar o computador do IFC e uma calculadora. Não é permitido o uso de qualquer outro dispositivo eletrônico durante a prova. Caso você seja ﬂagrado utilizando qualquer dispositivo, sua prova será zerada.<br>
@@ -71,7 +101,6 @@
         5. Leia as instruções com atenção. A interpretação das questões faz parte da avaliação.<br><br>
      <b>Boa prova!</b><br>
     </div>
-    <hr style="border: 2px solid olivegreen;">
 </body>
 
 ## Descrição do Cenário
@@ -87,11 +116,11 @@ Seu desafio é montar e configurar a infraestrutura de rede da AngelCorp do zero
 
 ## ROTEIRO DE ATIVIDADE
 
-Esta atividade acompanha um arquivo .pka com os dispositivos previamente instalados e algumas instruções adicionais.
+Esta atividade acompanha um arquivo do Cisco Packet Tracer com os dispositivos previamente instalados e algumas instruções adicionais.
 
 ### Parte 1: Cabeamento da Rede
 
-Você deverá conectar fisicamente os dispositivos utilizando os tipos de cabo especificados. Você encontrará as opções de cabo na barra de ferramentas inferior, sob o ícone de um raio (Connections). Observe a tabela de endereçamento IP disponível no Packet Tracer para escolher qual interface deverá receber o cabo.
+Você deverá conectar fisicamente os dispositivos utilizando os tipos de cabo especificados. Você encontrará as opções de cabo na barra de ferramentas inferior, sob o ícone de um raio (Connections). Observe a tabela de endereçamento IP para escolher qual interface deverá receber o cabo.
 
 1. Conexões LAN Internas da AngelCorp (PCs para Switches, Switches para Roteadores):
    - Utilize o cabo de Cobre Direto (Copper Straight-Through).
@@ -152,7 +181,7 @@ Consulte o endereçamento recebido e Preencha a Tabela com o endereçamento corr
 
 Preencha a tabela com os endereços dos dispositivos:
 
-| Nome da subrede | Roteador      | Endereço IP | Máscara de subrede |
+| Nome da subrede | Roteador      | <div style="width:190px">Endereço IP</div>  | <div style="width:190px">Máscara de subrede</div> |
 | --------------- | ------------- | ----------- | ------------------ |
 | Link 1          | RTR-CLOUD-OPS |
 | Link 1          | RTR-DEV-INFRA |

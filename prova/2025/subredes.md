@@ -1,11 +1,7 @@
-<style>
-    body {
-        font-size: 12px;
-    }
-    h3 {
-        font-size: 13px;
-    }
-</style>
+<head>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
 ### Endereços das Subredes AngelCorp
 - AngelCorp: 172.16.0.0/22
 - Rede DEV: 172.16.0.0/23
