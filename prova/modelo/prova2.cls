@@ -26,13 +26,13 @@
 \def\orientacoes#1{\gdef\@orientacoes{#1}}
 \def\prova#1{\gdef\@prova{#1}}
 
-\gdef\@curso{Curso Técnico}
-\gdef\@disciplina{Redes}
-\gdef\@professor{Angelita}
+\gdef\@curso{Bacharelado em Ciência da Computação}
+\gdef\@disciplina{Redes de Computadores I}
+\gdef\@professor{Angelita Rettore de Araujo}
 \gdef\@orientacoes{ }
-\gdef\@prova{Prova}
+\gdef\@prova{Avaliação}
 
-% --- Espaçamento e Margens (Seu código original corrigido) ---
+% --- Espaçamento e Margens ---
 \newcommand{\spacing}[1]{\renewcommand{\baselinestretch}{#1}\large\normalsize}
 
 \ifthenelse{\boolean{saving}}
@@ -53,20 +53,20 @@
     \spacing{2}
 }
 
-\setlength{\parskip}{0.2in}
-\setlength{\parindent}{0.2in}
+% \setlength{\parskip}{0.2in}
+% \setlength{\parindent}{0.2in}
 
 % --- O NOVO SISTEMA DE QUESTÕES (Simulando a classe exam) ---
 \newcounter{questnum}
 \newcommand{\question}[1][]{%
     \stepcounter{questnum}%
-    \par\vspace{-1.5em}\noindent
+    \par\noindent
     \textbf{\thequestnum.} \ifthenelse{\equal{#1}{}}{}{(#1 pontos)} \quad    
 }
 
 % Ambiente para alternativas (a, b, c...)
 \newenvironment{choices}{
-    \vspace{-1.5em}
+    % \vspace{-1.5em}
     \begin{enumerate}
     \renewcommand{\theenumi}{\Alph{enumi}}
     \renewcommand{\labelenumi}{\theenumi)}   
@@ -76,7 +76,7 @@
 
 % Ambiente para afirmações (I, II, III...)
 \newenvironment{statements}{
-    \vspace{-1.5em}
+    % \vspace{-1.5em}
     \begin{enumerate}
     \renewcommand{\theenumi}{\Roman{enumi}}
     \renewcommand{\labelenumi}{\theenumi.}
@@ -93,14 +93,14 @@
     \sffamily
     \begin{tabular}{@{} p{3.7cm} p{13.5cm} @{}}
      \multirow{5}{*}{\includegraphics[height=4.2cm]{modelo/Logo_IFC_vertical_Videira.png}} 
-     & \textbf{Curso:} \@curso \\
-     & \textbf{Disciplina:} \@disciplina \\
-     & \textbf{Professora:} \@professor \\
-     & \textbf{Aluno:} \rule{11cm}{0.4pt} \\
+     & \textbf{Curso:} \@curso \\[0.5em]
+     & \textbf{Disciplina:} \@disciplina \\[0.5em]
+     & \textbf{Professora:} \@professor \\[2em]
+     & \textbf{Aluno:} \rule{11cm}{0.4pt} \\[0.8em]
      & \textbf{Data: } \underline{\qquad/\qquad/\qquad\qquad} \\
     \end{tabular}
     
-    \vspace{5em}
+    \vspace{1em}
     {\color{OliveGreen}\hrule height 0.5pt}
     \begin{center}
         {\bfseries\Large \@prova}
