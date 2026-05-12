@@ -13,9 +13,9 @@ purge: clean
 	@rm -f *.pdf
 
 save: clean
-	-mv *.pdf 2024/	
+	-mv *.pdf 2026/	
 
 prova:
-	./compila.sh 2024/$(filename).tex
-	-mv *.pdf 2024/
+	./compila.sh 2026/$(filename).tex
+	-mv *.pdf 2026/
 	$(MAKE) clean

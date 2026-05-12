@@ -18,6 +18,7 @@
 \RequirePackage{multirow}
 \RequirePackage{graphicx}
 \RequirePackage{calc} % Para cálculos de medidas
+\RequirePackage{extsizes}      % <-- LINHA NOVA: permite 14pt
 
 % --- Variáveis do Cabeçalho ---
 \def\curso#1{\gdef\@curso{#1}}

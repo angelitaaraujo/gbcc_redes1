@@ -1,6 +1,6 @@
 \documentclass[11pt, addpoints]{modelo/prova2}
 \usepackage[T1]{fontenc}
-\usepackage[brazilian,english]{babel}
+\usepackage[brazilian]{babel}
 
 \include{orientacoes}
 \begin{document}
@@ -9,16 +9,16 @@
 
 \question[0.5] A arquitetura da Internet é composta por uma borda (sistemas finais), um núcleo (roteadores interconectados) e redes de acesso que utilizam diversos meios físicos para o transporte de bits. O desempenho percebido pelas aplicações distribuídas depende diretamente de fatores como atraso, perda de pacotes e vazão (throughput). Sobre esses conceitos fundamentais de redes de computadores, analise as afirmações a seguir:
     \begin{statements}
-        \item O núcleo da rede (network core) é fundamentalmente uma malha de roteadores interconectados que utilizam a comutação de pacotes para encaminhar dados entre a origem e o destino.
+        \item O núcleo da rede é fundamentalmente uma malha de roteadores interconectados que utilizam a comutação de pacotes para encaminhar dados entre a origem e o destino.
         \item Meios físicos guiados, como a fibra óptica, transportam sinais através de pulsos de luz e oferecem alta imunidade a ruídos eletromagnéticos, resultando em taxas de erro significativamente menores que as do par trançado.
-        \item O atraso de transmissão experimentado por um pacote em um enlace é determinado pela razão entre a taxa de transmissão do enlace (RRR bps) e o comprimento do pacote (LLL bits).
+        \item O atraso de transmissão experimentado por um pacote em um enlace depende exclusivamente da taxa de transmissão do enlace, sendo que enlaces com maior taxa de transmissão sempre resultam em maior atraso de transmissão.
         \item A vazão (throughput) de uma transferência de dados entre um emissor e um receptor é limitada pela capacidade do enlace de menor taxa (enlace gargalo) ao longo do caminho de comunicação.
         \item Satélites de órbita baixa (LEO) orbitam a altitudes de aproximadamente 36.000 km, o que explica a latência de propagação superior à observada em enlaces de fibra óptica transoceânicos.
     \end{statements}
     É correto o que se afirma em:
     \begin{choices}
         \item I e II, apenas.
-        \item I, II e IV, apenas. %correta
+        \item I, II e IV, apenas. 
         \item III e V, apenas.
         \item I, II, III e IV, apenas.
         \item I, II, III, IV e V.
@@ -42,7 +42,7 @@
 \question[0.5] Diferente das redes Ethernet cabeadas, que utilizam o protocolo CSMA/CD, as redes sem fio (IEEE 802.11) operam em um meio onde a detecção de colisões durante a transmissão é tecnicamente inviável devido ao problema do terminal escondido e à grande variação na força dos sinais. Para gerenciar o acesso ao canal, o padrão utiliza o protocolo CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance). Sobre o funcionamento desse protocolo, assinale a alternativa correta:
     \begin{choices}
         \item O CSMA/CA evita colisões ao permitir que o transmissor detecte sinais de outros dispositivos enquanto envia seus próprios dados, interrompendo a transmissão imediatamente após uma colisão.
-        \item No CSMA/CA, após detectar que o canal está livre, a estação transmite o quadro imediatamente, sem a necessidade de tempos de espera ou intervalos entre quadros (IFS).
+        \item No CSMA/CA, após detectar que o canal está livre, a estação transmite o quadro imediatamente, sem a necessidade de tempos de espera ou intervalos entre quadros.
         \item O mecanismo opcional de reserva de canal, que utiliza os quadros de controle RTS (Request to Send) e CTS (Clear to Send), auxilia na mitigação do problema do terminal escondido ao reservar o meio antes da transmissão de dados.
         \item O protocolo CSMA/CA garante que colisões nunca ocorram no meio sem fio, eliminando a necessidade de quadros de reconhecimento (ACK) para confirmar o recebimento bem-sucedido.
         \item O CSMA/CA é um protocolo de acesso determinístico, onde cada estação possui um tempo fixo e pré-agendado para transmitir, evitando assim a contenção pelo canal.
@@ -50,7 +50,7 @@
 
 \question[0.5] O Modelo de Referência OSI (Open Systems Interconnection) foi desenvolvido para padronizar a comunicação entre sistemas heterogêneos, dividindo as funções de rede em sete camadas distintas. A respeito da organização e das funções dessas camadas, analise as duas asserções a seguir e a relação proposta entre elas:
     \begin{statements}
-        \item I. A camada de Transporte é responsável pelo controle de fluxo e pela entrega de dados fim-a-fim entre os processos que executam nos sistemas finais.\\[0.7em]
+        \item A camada de Transporte é responsável pelo controle de fluxo e pela entrega de dados fim-a-fim entre os processos que executam nos sistemas finais.\\[0.7em]
         \textbf{PORQUE:}\vspace{0.5em}
         \item O Modelo OSI define que cada camada deve realizar um conjunto de funções bem definidas e interagir apenas com as camadas imediatamente superior e inferior.
     \end{statements}
@@ -66,7 +66,7 @@
     \begin{statements}
         \item O protocolo IP (Internet Protocol) é classificado como um protocolo de melhor esforço (best-effort), o que significa que ele não garante a entrega dos datagramas ao destino final.\\[0.7em]
         \textbf{PORQUE:} \vspace{0.5em}
-        \item A responsabilidade de garantir a confiabilidade da entrega, o controle de fluxo e a correção de erros é delegada a protocolos de camadas superiores, como o TCP (Transmission Control Protocol)
+        \item A responsabilidade de garantir a confiabilidade da entrega é delegada a protocolos de camadas superiores, como o TCP (Transmission Control Protocol).
     \end{statements}
     A respeito dessas asserções, assinale a opção correta:
     \begin{choices}
@@ -79,18 +79,18 @@
 \question[0.5] As redes Wi-Fi modernas operam frequentemente em duas bandas de frequência principais: 2.4 GHz e 5 GHz. Cada uma dessas bandas possui características físicas distintas que influenciam a cobertura e o desempenho da rede local. Sobre as diferenças entre essas frequências, assinale a alternativa correta:
     \begin{choices}
         \item A frequência de 5 GHz possui maior alcance físico e atravessa obstáculos sólidos (como paredes e tetos) com mais facilidade do que a frequência de 2.4 GHz.
-        \item A banda de 2.4 GHz oferece taxas de transmissão de dados significativamente superiores à de 5 GHz, sendo a escolha ideal para aplicações de streaming em alta definição e jogos online.
-        \item A banda de 2.4 GHz é mais suscetível a interferências eletromagnéticas de outros dispositivos domésticos, como fornos de micro-ondas e telefones sem fio, devido ao maior congestionamento dessa frequência.
+        \item A banda de 2.4 GHz oferece taxas de transmissão de dados significativamente superiores à de 5 GHz, sendo a escolha ideal para aplicações de streaming em alta definição e jogos online.        
         \item A banda de 5 GHz é composta por apenas 3 canais que não se sobrepõem, o que a torna mais congestionada e propensa a colisões em ambientes com muitos roteadores próximos.
         \item Dispositivos que utilizam a frequência de 5 GHz consomem menos energia e possuem antenas menores, sendo compatíveis com todos os roteadores fabricados antes do padrão IEEE 802.11n.
-    \end{choices} \answer{C}
+        \item A banda de 2.4 GHz é mais suscetível a interferências eletromagnéticas de outros dispositivos domésticos, como fornos de micro-ondas e telefones sem fio, devido ao maior congestionamento dessa frequência.
+    \end{choices} \answer{E}
 \question[0.5] Em ambientes corporativos, é comum o uso de VLANs (Virtual Local Area Networks) para segmentar logicamente uma infraestrutura de rede física em múltiplas redes de difusão (broadcast domains) independentes. Sobre o funcionamento e os benefícios das VLANs, assinale a alternativa correta:
     \begin{choices}
-        \item Uma VLAN permite que dispositivos conectados a diferentes switches físicos se comuniquem na mesma camada 2 como se estivessem no mesmo switch, eliminando a necessidade de roteamento para comunicação entre VLANs distintas.
+        \item Uma VLAN permite que dispositivos conectados a diferentes switches físicos se comuniquem na mesma camada~2 como se estivessem no mesmo switch.
         \item O uso de VLANs aumenta a segurança da rede ao isolar o tráfego de diferentes departamentos, impedindo que um broadcast gerado em uma VLAN seja propagado para as demais, o que também otimiza o uso da largura de banda.
         \item O padrão IEEE 802.1Q adiciona um rótulo (tag) de 32 bits ao cabeçalho do quadro Ethernet para identificar a qual rede sem fio (SSID) aquele tráfego pertence originalmente.
         \item Para que o tráfego de múltiplas VLANs atravesse um único enlace físico entre dois switches, utiliza-se uma porta de acesso (access port), que mantém as etiquetas de identificação de cada quadro.
-        \item A segmentação por VLAN substitui completamente a necessidade de sub-redes IP, permitindo que dispositivos em VLANs diferentes utilizem a mesma faixa de endereçamento e se comuniquem sem um roteador ou switch camada 3.
+        \item Uma VLAN elimina completamente a necessidade de dispositivos de interconexão entre redes, permitindo que qualquer estação em uma VLAN se comunique diretamente com qualquer estação em outra VLAN, independentemente da localização física.
     \end{choices} \answer{B}
 \question[0.5] Os switches de camada 2 são dispositivos fundamentais para a eficiência das redes locais modernas, pois substituíram os hubs ao oferecerem maior segurança e melhor aproveitamento da largura de banda. Sobre o funcionamento, tabelas de encaminhamento e domínios de rede desses dispositivos, assinale a alternativa \textbf{INCORRETA}:
     \begin{choices}
@@ -98,20 +98,20 @@
         \item O processo de aprendizagem (learning) de um switch ocorre de forma dinâmica: ao receber um quadro, o switch analisa o endereço MAC de origem e o associa à porta física por onde o dado ingressou, alimentando sua tabela de comutação.
         \item Ao receber um quadro cujo endereço MAC de destino não consta em sua tabela de encaminhamento (MAC address table), o switch realiza o descarte imediato do quadro por motivos de segurança, evitando o tráfego desnecessário.
         \item Um switch padrão, operando sem a configuração de VLANs, mantém todos os seus nós conectados dentro de um único domínio de difusão (broadcast domain).
-        \item No método de encaminhamento Store-and-Forward, o switch armazena o quadro completo e verifica o campo FCS (Frame Check Sequence) antes de enviá-lo ao destino, garantindo que quadros corrompidos não sejam propagados.
+        \item Um switch de camada 2 utiliza o endereço MAC de destino contido no quadro para determinar a porta de saída, consultando sua tabela de comutação (MAC address table) para realizar o encaminhamento.
     \end{choices} \answer{C}
 \question[0.5] Na camada de enlace, a unidade de dados (quadro) é transmitida sobre um meio físico que está sujeito a ruídos e interferências. Para garantir que os dados cheguem íntegros e que o receptor não seja sobrecarregado pelo transmissor, utilizam-se técnicas de detecção de erros e controle de fluxo. Sobre esses mecanismos, assinale a alternativa correta:
     \begin{choices}
         \item O método de Paridade Par é uma técnica de detecção de erros extremamente robusta, capaz de detectar e corrigir automaticamente qualquer quantidade de bits invertidos em um quadro.
-        \item O controle de fluxo por Stop-and-Wait aumenta a eficiência do enlace ao permitir que o transmissor envie múltiplos quadros consecutivamente sem aguardar confirmações (acknowledgments).
+        \item Na camada de enlace, o switch é responsável por determinar a melhor rota entre redes distintas, decidindo dinamicamente por qual caminho encaminhar os quadros com base em algoritmos de roteamento.
+        \item A detecção de erros na camada de enlace elimina a necessidade de qualquer verificação de integridade nas camadas superiores, pois o enlace garante a entrega 100\% livre de erros.
         \item O algoritmo de Verificação de Redundância Cíclica (CRC) utiliza a divisão de polinômios para gerar um código de verificação que é anexado ao quadro, permitindo que o receptor detecte erros de bits com alta probabilidade.
-        \item A detecção de erros na camada de enlace elimina a necessidade de qualquer verificação de integridade nas camadas superiores (como Transporte ou Aplicação), pois o enlace garante a entrega 100\% livre de erros.
         \item Em um enlace Half-Duplex, o controle de fluxo é desnecessário, pois a natureza bidirecional simultânea do meio impede que o receptor fique sobrecarregado.
-    \end{choices} \answer{C}
+    \end{choices} \answer{D}
 \question[0.5] As redes locais sem fio, padronizadas pelo grupo IEEE 802.11, utilizam uma arquitetura baseada em infraestrutura ou modo ad hoc. No modo infraestrutura, o componente central que gerencia a comunicação entre as estações sem fio e a rede cabeada é fundamental para a organização do BSS (Basic Service Set). Sobre a arquitetura e os padrões Wi-Fi, assinale a alternativa correta:
     \begin{choices}
         \item O Ponto de Acesso (Access Point - AP) atua como uma ponte de camada 2 entre os dispositivos sem fio e a infraestrutura de rede cabeada.
-        \item O padrão IEEE 802.11b, embora antigo, é superior ao 802.11ac em termos de taxa de transmissão, atingindo velocidades de até 1.3 Gbps na banda de 2.4 GHz.
+        \item O padrão IEEE 802.11b é superior ao 802.11ac em termos de taxa de transmissão, além de operar em uma faixa de frequência menos congestionada.
         \item O SSID (Service Set Identifier) é um endereço físico de 48 bits, similar ao MAC, que identifica unicamente cada interface de rede sem fio no mundo.
         \item Nas redes Wi-Fi, a segurança é garantida exclusivamente pela ocultação do SSID, o que impede que usuários não autorizados interceptem o tráfego de dados.
         \item O padrão 802.11n foi o primeiro a introduzir a tecnologia MIMO (Multiple Input Multiple Output), permitindo o uso de apenas uma antena para dobrar a distância de cobertura.
@@ -123,7 +123,7 @@
     \end{choices}
 \question[2] Uma pequena empresa de software está enfrentando problemas de lentidão em sua rede local, que atualmente utiliza um Hub central para interconectar 20 desenvolvedores. O tráfego de rede é intenso devido ao constante envio de arquivos para o servidor e comunicações via videoconferência. O analista de TI sugeriu a substituição imediata do Hub por um Switch de Camada 2.\\ Com base nos conceitos de camada de enlace e dispositivos de interconexão, responda:
     \begin{choices}
-        \item Explique a diferença fundamental entre um Hub e um Switch no que diz respeito ao tratamento do tráfego de dados (encaminhamento de quadros). Por que o Switch é considerado um dispositivo mais "inteligente"? (1.0 ponto)
+        \item Explique a diferença fundamental entre um Hub e um Switch no que diz respeito ao tratamento do tráfego de dados (encaminhamento de quadros). Por que o Switch é considerado um dispositivo mais ``inteligente''? (1.0 ponto)
         \item Como a substituição do Hub pelo Switch impacta os domínios de colisão e o domínio de difusão (broadcast) da rede? Descreva o que acontece com cada um desses domínios após a troca. (1.0 ponto)
     \end{choices}
 \question[2] Em uma rede de campus universitário, dois grupos de alunos de Ciência da Computação estão realizando uma videoconferência em tempo real. O Grupo A está conectado via rede Ethernet cabeada (Cat6), enquanto o Grupo B utiliza a rede Wi-Fi (IEEE 802.11ac) em uma área com alta densidade de usuários. Durante a sessão, ambos percebem variações na qualidade da chamada, mas o Grupo B experimenta interrupções muito mais frequentes e atrasos variáveis (jitter).Com base na integração entre os conceitos de fundamentos (atraso/perda) e as características das camadas de enlace (com e sem fio), analise o cenário e responda:
